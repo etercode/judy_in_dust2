@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Judy</title>
+    <style>
+        body { margin: 0; }
+
+        #loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 16px 24px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #eee;
+            font-family: sans-serif;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+        #progress { color: #7fdbca; font-weight: bold; }
+
+        #info {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 10px 14px;
+            background: rgba(0, 0, 0, 0.55);
+            color: #eee;
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            border-radius: 6px;
+            pointer-events: none;
+        }
+        #status { color: #7fdbca; font-weight: bold; }
+        #clock { color: #f4d58d; font-weight: bold; }
+        #position { color: #ff9f6b; font-weight: bold; font-family: monospace; }
+        #spawn-hint { color: #aaa; font-size: 12px; }
+    </style>
+</head>
+<body>
+<div id="loading">Loading Judy… <span id="progress">0%</span></div>
+<div id="info" style="display: none;">
+    Click canvas to play · <strong>Mouse</strong> look · <strong>WASD</strong> move · <strong>Shift</strong> sprint · <strong>Space</strong> jump · <strong>C</strong> crouch · <strong>Shift+C</strong> slide · <strong>Numpad 0</strong> orbit · <strong>N</strong> noclip · <strong>Esc</strong> release mouse<br>
+    Noclip: <strong>WASD</strong> move · <strong>Q/E</strong> down/up · no collision or gravity<br>
+    Stand idle 60s for dance · <span id="clock">60s</span><br>
+    Position · <span id="position">—</span><br>
+    <span id="spawn-hint">Press N (or Numpad 1) for noclip</span><br>
+    <span id="status">idle</span>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
